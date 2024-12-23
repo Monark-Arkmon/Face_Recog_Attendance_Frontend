@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+#👨 Face Recognition Attendance System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web-based attendance system using facial recognition, built with React (frontend) and FastAPI (backend).
 
-## Available Scripts
+## Features
+- Face registration with multiple sample captures
+- Real-time face recognition
+- Automated attendance recording
+- Daily attendance tracking
+- User-friendly interface
 
-In the project directory, you can run:
+## Setup Instructions
 
-### `npm start`
+### Backend Setup
+1. Clone backend repository:
+```bash
+git clone https://github.com/Monark-Arkmon/Face_Recog_Attendance_Backend.git
+cd Face_Recog_Attendance_Backend
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Install dependencies:
+```bash
+pip install fastapi uvicorn opencv-python numpy scikit-learn pandas python-multipart
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Start backend server:
+```bash
+python -m uvicorn app:app --reload
+```
+Server runs at http://localhost:8000
 
-### `npm test`
+### Frontend Setup
+1. Clone frontend repository:
+```bash
+git clone https://github.com/Monark-Arkmon/Face_Recog_Attendance_Frontend.git
+cd Face_Recog_Attendance_Frontend
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
+```bash
+npm install
+```
 
-### `npm run build`
+3. Start frontend application:
+```bash
+npm start
+```
+Application runs at http://localhost:3000
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage Guidelines
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Face Registration
+1. Select "Register New Face"
+2. Enter person's name
+3. Ensure:
+   - Well-lit face
+   - Dark background preferred
+   - Face directly facing camera
+   - Stay still during capture
+4. System captures 5 images automatically
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Taking Attendance
+1. Select "Recognize Face"
+2. Position face in frame
+3. Click "Take Attendance"
+4. System records attendance with timestamp
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Important Notes
+- Face recognition works best in well-lit areas with dark backgrounds
+- Maintain consistent lighting conditions
+- Avoid excessive movement during registration
+- Keep 50-100cm distance from camera
+- Ensure clear facial visibility without obstructions
